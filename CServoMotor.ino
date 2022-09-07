@@ -10,16 +10,13 @@ void setup() {
   meuservo.attach(9);
 }
 void loop() {
-     
   if (Serial.available() > 0) {
-    //Lê o JSON disponível na porta serial:
     StaticJsonDocument<TAMANHO> json;
     deserializeJson(json, Serial);
     if(json.containsKey("grau")) {
       int valor = json["grau"];
       meuservo.write(valor); 
     }
-
   } 
   
 }
