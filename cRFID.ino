@@ -6,10 +6,9 @@ const int TAMANHO = 50;
 
 void setup() 
 {
-  Serial.begin(9600);   // Inicia a serial
-  SPI.begin();      // Inicia  SPI bus
-  mfrc522.PCD_Init();   // Inicia MFRC522
-  //Define o número de colunas e linhas do LCD:  
+  Serial.begin(9600);   
+  SPI.begin();      
+  mfrc522.PCD_Init();   
 }
  
 void loop() 
